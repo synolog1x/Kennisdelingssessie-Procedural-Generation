@@ -9,6 +9,8 @@ public class ProceduralGenerator : MonoBehaviour
     public int mapWidth = 10;
     public int mapLength = 10;
 
+    // int[,] tilesToCheck = new int[,] {{x-1, z-1}, {x, z-1}, {x+1, z-1}, {x-1, z}, {x-1, z+1}, {x, z+1}, {x+1, z+1}, {x+1, z}};
+
     void Start()
     {
         map = new TileType[mapLength, mapWidth];

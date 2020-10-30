@@ -9,7 +9,6 @@ public class ProceduralGenerator : MonoBehaviour
     public int mapWidth = 10;
     public int mapLength = 10;
 
-    // Start is called before the first frame update
     void Start()
     {
         map = new TileType[mapLength, mapWidth];
@@ -43,11 +42,11 @@ public class ProceduralGenerator : MonoBehaviour
     {
         tileMap = new Dictionary<TileType, GameObject>();
 
-        var objects = Resources.LoadAll<GameObject>("Prefabs");
+        GameObject[] objects = Resources.LoadAll<GameObject>("Prefabs");
 
         foreach (GameObject g in objects)
         {
-            if (g.tag == "Tile")
+            if (g.CompareTag("Tile"))
             {
                 Debug.Log(g.name);
                 tileMap.Add(g.GetComponent<Tile>().type, g);

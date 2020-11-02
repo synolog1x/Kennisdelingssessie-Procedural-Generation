@@ -153,6 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seed: 0
+  forestFactor: 0.6
+  desertFactor: 0.6
+  plainsFactor: 0.4
   mapWidth: 10
   mapLength: 10
 --- !u!4 &816207979
